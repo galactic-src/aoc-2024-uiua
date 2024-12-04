@@ -1,30 +1,22 @@
 # Experimental!
+~ "helpers.ua" ~ ParseMatrix
 
 Input ← &fras "input/day1.in"
 
-ParseInput ← ⍉≡(⊜⋕ ≠ @ .) ⊜∘ ≠ @\n.
+# Part 1
 
-InputA ← $ 1   2
-         $ 3   4
-⍤ "Should parse InputA" ≍ [1_3 2_4] ParseInput InputA
-
-
-### Part 1 ###
-
-Sorted    ← ≡⍆ ParseInput
+Sorted    ← ≡⍆⍉ ParseMatrix
 Distances ← ⌵/-
 ResultA   ← °⋕/+ Distances Sorted Input
 
+# Part 2
 
-### Part 2 ###
-
-ParsedInput ← ParseInput Input
+ParsedInput ← ⍉ ParseMatrix Input
 ColA        ← ⊢ ParsedInput
 ColB        ← ⊣ ParsedInput
 ResultB     ← /+∵(×/+=ColB.)ColA
 
-
-### Results ###
+# Results
 
 $"Part 1: _" ResultA
 $"Part 2: _" ResultB
