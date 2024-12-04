@@ -5,9 +5,15 @@ Input ← &fras "input/day1.in"
 
 # Part 1
 
-Sorted    ← ≡⍆⍉ ParseMatrix
-Distances ← ⌵/-
-ResultA   ← °⋕/+ Distances Sorted Input
+Sorted      ← ≡⍆⍉ ParseMatrix
+Distances   ← ⌵/-
+ParseMatrix ← ≡(⊜⋕ ≠ @ .) ⊜∘ ≠ @\n.
+
+MatrixA ← $ 1   2
+          $ 3   4
+⍤"Should parse MatrixA" ≍ [1_2 3_4] ParseMatrix MatrixA
+
+ResultA ← °⋕/+ Distances Sorted Input
 
 # Part 2
 
