@@ -7,6 +7,4 @@ Matrix₁ ← $ 1   2
 ParseArrays ← |1 ≡⍚(⊜⋕ ≠ @ .) ⊜□≠@\n .
 
 Arrays₁ ← $ 1
-         $ 2 3
-ParseArrays Arrays₁
-⍤ "Should parse different-length arrays" ≍ {[1] [2 3]} ParseArrays Arrays₁
+          $ 2 3

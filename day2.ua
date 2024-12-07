@@ -1,9 +1,9 @@
 # Experimental!
 ~ "helpers.ua" ~ ParseArrays
 
+# Input ← ParseArrays &fras "example/ex02_1.txt"
 Input ← ParseArrays &fras "input/day2.in"
 
-FirstReport ← ⊢ Input
 ZipWithNext ← |1 ⊟ ⇌↘1⇌ : ↘1.
 Diffs       ← |1 /- ZipWithNext
 
@@ -13,4 +13,10 @@ IsSafe                    ← |1 × AllIncreasingOrDecreasing ⟜AllNearby
 
 Result₁ ← /+≡⍚(IsSafe Diffs) Input
 
+DropEach ← ≡(▽°□⊢ ⊙°□)⊙□⍉⊞≠□.⇡⧻.
+IsSafe₂  ← >0/+≡(IsSafe Diffs) DropEach
+
+Result₂ ← /+≡(IsSafe₂°□) Input
+
 $"Part 1: _" Result₁
+$"Part 2: _" Result₂
