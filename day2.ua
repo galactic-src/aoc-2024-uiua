@@ -1,7 +1,7 @@
 # Experimental!
 ~ "helpers.ua" ~ ParseArrays
 
-# Input ← ParseArrays &fras "example/ex02_1.txt"
+# Input ← ParseArrays &fras "example/day2_1.in"
 Input ← ParseArrays &fras "input/day2.in"
 
 ZipWithNext ← |1 ⊟ ⇌↘1⇌ : ↘1.

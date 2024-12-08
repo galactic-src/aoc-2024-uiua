@@ -1,6 +1,7 @@
 # Experimental!
 ~ "helpers.ua" ~ ParseMatrix
 
+# Input = &fras "example/day1_1.in"
 Input ← &fras "input/day1.in"
 
 # Part 1
