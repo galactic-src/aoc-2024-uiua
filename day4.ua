@@ -20,28 +20,13 @@ Result₁     ← /+/+/+≡≡(FindXmases) InputGrids₁
 
 $"Part 1: _" Result₁
 
-# generate transpose and reflections
-# Patterns₂ ← [
-#   ⟜⇌⍉⟜≡⇌⟜⍉[
-#     "M.S"
-#     ".A."
-#     "M.S"
-#   ]
-# ]
-
 Patterns₂ ← [
   ⟜⇌[0_0 2_0 1_1 0_2 2_2]
   ⟜⇌[0_0 0_2 1_1 2_0 2_2]
 ]
 
-# Patterns₂
-
 InputGrids₂ ← ≡≡□ ◫ [3 3] ⌝↘ [2 2] Input
-
-# InputGrids₂
-# ⊞(≍?⊙(°□)≠@.’) Patterns₂ InputGrids₂
-FindMases ← ≡(≍"MMASS") ⊡ Patterns₂ °□
-
-Result₂ ← /+/+/+≡≡(FindMases) InputGrids₂
+FindMases   ← ≡(≍"MMASS") ⊡ Patterns₂ °□
+Result₂     ← /+/+/+≡≡(FindMases) InputGrids₂
 
 $"Part 2: _" Result₂
